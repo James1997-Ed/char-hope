@@ -30,7 +30,7 @@ function NavBar() {
     <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScroll ? 'bg-white shadow': 'hidden'}`}>
         <div className="flex-col md:flex-row hidden sm:flex items-center justify-between shadow">
             <div>
-            <Link href="/"><img src ="/logo.png" alt="react imag" width="10" height="10" className="w-48 md:w-auto h-auto" /></Link>
+            <Link href="/"><Image src ="/logo.png" alt="react imag" width="300" height="100" className="w-48 md:w-auto h-auto"/></Link>
             </div>
         <div className="flex items-center mt-4 md:mt-0">
           <nav className="flex list-none">

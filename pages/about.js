@@ -30,7 +30,7 @@ function AboutUs() {
         <Link href="/" className='text-blue-800  text-center'>Read More</Link> </p>
         </div>
         <h1 className='text-4xl text-center font-bold'>Our Motto</h1>
-            <h1 className='sm:text-4xl text-center font-bold p-8'>"to bless many children as God has bless me"</h1>
+            <h1 className='sm:text-4xl text-center font-bold p-8'>&quot;to bless many children as God has bless me&quot;</h1>
             <div className='bg-blue-400 text-white m-2 sm:mb-4 p-8'>
             <h1 className='sm:text-4xl text-2xl text-center font-bold'>About Our Founder</h1>
         </div>
@@ -39,8 +39,8 @@ function AboutUs() {
                 <p className='p-2'>
                     A Nurse by profession, successful business women, and Humanitarian,
                     Mrs Clar M. Weah passion to help the underprivileged dates long before
-                    becoming First Lady in 2018, Mrs Weah, whose motto is "To bless as many
-                    children as God has Blessed me", was helping foster children in the
+                    becoming First Lady in 2018, Mrs Weah, whose motto is &quot;To bless as many
+                    children as God has Blessed me&quot;, was helping foster children in the
                     United States, Jamaica, and Africa. Her ascendency to the status as First
                     Lady only provides a wider platform to achieve her purpose of improving lives.
                 </p>
@@ -52,9 +52,9 @@ function AboutUs() {
                 </p>
                 <p className='p-2'>
                     A year later, on June 20 2019, the First Lady launched 
-                    her flagship program the "She's You Movement." Hinging on 
+                    her flagship program the &quot;She&apos;s You Movement.&quot; Hinging on 
                     four pillars - Health, Education, Economic Empowerment, and Gender 
-                    Equality - She's You Movement seeks the overall advancement
+                    Equality - She&apos;s You Movement seeks the overall advancement
                     of women and girls for a better and prosperous Liberia.<br/>
                     <Link href="/" className="text-blue-800">Read More</Link>
                 </p> 

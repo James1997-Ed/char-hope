@@ -21,17 +21,17 @@ function LayoutDefault() {
     <div className="text-center p-4">
       <Image src="/help.jpg" alt="this is a img tag" width="100" height="100" className="mx-auto"/>
       <h1 className="font-bold text-2xl">Make Donation </h1>
-      <p>It's not how much we give but how much love we put into giving.</p>
+      <p>It&apos;s not how much we give but how much love we put into giving.</p>
     </div>
     <div className="text-center p-4">
-      <Image className="" src="/donate.jpg" alt="welcome" width="100" height="100" className="mx-auto"/>
+      <Image src="/donate.jpg" alt="welcome" width="100" height="100" className="mx-auto"/>
       <h1 className="font-bold text-2xl">Fundraising </h1>
-      <p>It's not how much we give but how much love we put into giving.</p>
+      <p>It&apos;s not how much we give but how much love we put into giving.</p>
     </div>
     <div className="text-center p-4">
       <Image src="/help2.jpg" alt="Hi there" width="100" height="100" className="mx-auto"/>
       <h1 className="font-bold text-2xl">Become A Volunteer</h1>
-      <p>It's not how much we give but how much love we put into giving.</p>
+      <p>It&apos;s not how much we give but how much love we put into giving.</p>
     </div>
   </div>
   
@@ -39,7 +39,7 @@ function LayoutDefault() {
         <div className="sm:flex block p-8 text-center">
           <div className="p-4">
              <Image src="/children.png" alt="say" width="300" height="200" className="pl-2"/>
-             <h1 className="font-bold text-xl">She's You Menstrual & Personal
+             <h1 className="font-bold text-xl">She&apos;s You Menstrual & Personal
              Hygiene Initiative</h1>
              <p>Reproductive Health - Menstrual
              Hygiene Management (MHM).
@@ -59,7 +59,7 @@ function LayoutDefault() {
               </div>
               <div className="p-4">
               <Image src="/children2.png" alt="children2.png" width="300" height="100" className="pl-2 ml-4 items-center"/>
-              <h1 className="font-bold text-xl">The CHF is lunching a She's You Project</h1>
+              <h1 className="font-bold text-xl">The CHF is lunching a She&apos;s You Project</h1>
               <p>Educating and empowering the most vulnerable
               women and girls and particularly those living with disabilities. 
               The CHF believes that young girls should not
@@ -77,17 +77,17 @@ function LayoutDefault() {
           <h1 className="text-center font-bold text-2xl sm:text-4xl underline">Latest News</h1>
           <div className="sm:flex block text-center grid-rows-3 m-4 p-4 justify-items-center align-items-center">
   <div className="p-4 m-2">
-    <Image src="/city_of_hope.jpeg" alt="jpeg" width="300" height="200"/>
+    <Image src="/city_of_hope.jpeg" alt="jpeg" width="300" height="200" className="mx-auto"/>
     <h1 className="font-bold text-xl">City Of Hope</h1>
     <p>Aims to accommodate Disadvantage girls and Orphans at 85% completion. Empowering girls with Skills.</p>
   </div>
   <div>
-    <Image src="/city_of_hope2.png" alt="2.png" width="300" height="200"/>
+    <Image src="/city_of_hope2.png" alt="2.png" width="300" height="200" className="mx-auto"/>
     <h1 className="font-bold text-xl">City Of Hope</h1>
     <p>A multipurpose complex under Construction by Clar Hope Foundation to provide quality education to 200 girls ages 3-5 and life skills to street girls and disadvantaged youth thereby restoring their hope for a brighter future.</p>
   </div>
   <div>
-    <Image src="/city_of_hope3.jpeg" alt="WhatsApp2.jpeg" width="300" height="200" className=""/>
+    <Image src="/city_of_hope3.jpeg" alt="WhatsApp2.jpeg" width="300" height="200" className="mx-auto"/>
     <h1 className="font-bold text-xl">City Of Hope</h1>
   </div>
 </div>
