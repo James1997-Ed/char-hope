@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function LayoutDefault() {
   return (
@@ -12,9 +13,9 @@ function LayoutDefault() {
     </video>
    </div>
    <div className="block sm:flex justify-center text-center z-10 top-50% ">
-     <a href="/donate"><button className="p-2 bg-black text-white sm:text-2xl font-bold m-2 sm:m-4 sm:block underlin hover:bg-white hover:text-black">Donate Now!</button></a>
-     <a href="/applied"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 sm:m-4 sm:block hover:bg-white hover:text-black">Applied!</button></a>
-     <a href="/subscribe"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Subscribe!</button></a>
+     <Link href="/donate"><button className="p-2 bg-black text-white sm:text-2xl font-bold m-2 sm:m-4 sm:block underlin hover:bg-white hover:text-black">Donate Now!</button></Link>
+     <Link href="/applied"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 sm:m-4 sm:block hover:bg-white hover:text-black">Applied!</button></Link>
+     <Link href="/subscribe"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Subscribe!</button></Link>
    </div>
     </div>
     <div className="sm:flex block">

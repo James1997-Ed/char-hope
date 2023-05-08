@@ -35,7 +35,7 @@ function Services() {
           </div>
           <div>
           <div>
-            <Image src="/help2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
+            <Image src="/new2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
           </div>
         <div className='text-center'>
           <h1 className='text-2xl font-bold'>Education</h1>

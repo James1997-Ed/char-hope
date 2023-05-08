@@ -6,9 +6,9 @@ function AboutUs() {
   return (
     <div>
       <div>
-        <div className='block sm:flex m-16 pt-16 '>
+        <div className='block sm:flex m-16 pt-12 '>
           <div>
-            <h1 className='text-2xl sm:text-4xl font-bold m-16 '>About Us</h1>
+            <h1 className='sm:text-4xl text-4xl font-bold m-16 '>About Us</h1>
           </div>
          <div>
               <video autoPlay loop className="w-200  h-200 ">
