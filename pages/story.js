@@ -1,12 +1,54 @@
-import react from "react";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+
+
 
 export default function Story(){
+
+  function SimpleNextArrow(props){
+    const {className, style, onClick} = props
+    return(
+      <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+    )
+  }
+
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SimpleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
     return(
        <div className="mt-32 items-center">
-            <div className="mt-32 sm:text-4xl text-2xl text-center font-bold"><h1>Our Story</h1>  </div>
+            <div className="mt-32 sm:text-6xl text-4xl text-center font-bold">
+            <h1>Our Story</h1>
+            </div>
               <div>
-            <p className="m-16 sm:text-xl sm:p-2'">
+            <p className="sm:m-16 m-8 sm:text-xl sm:p-2'">
             Clar Hope Foundation, was founded in 2018 by the First Lady of Liberia, Madam Clar Marie Weah a non-political
             and non-profit organization, in an effort to create an equitable society in Liberia where women and children 
             (in particular), are healthy, educated and fully empowered to have a prosperous life. Is reported making significant 
@@ -15,7 +57,7 @@ export default function Story(){
             particularly empowering girls with education and skills.
             A year later, on June 20, 2019, the First Lady launched her flagship program the “She’s You Movement.” 
               </p>
-            <p className="m-16 sm:text-xl sm:p-2'">
+            <p className="sm:m-16 m-8 sm:text-xl sm:p-2'">
             Clar Hope Foundation is an apolitical, non-for-profit, and non-governmental organization founded by Mrs.Weah in 
             June 2018 with the aim of creating an equitable society in Liberia where women, girls, and children are healthy, 
             educated, and fully empowered to lead independent lives. Mrs. Weah said the progressive pace of the construction 
@@ -29,13 +71,26 @@ export default function Story(){
             for Prosperity and Development.
             </p>
         </div>
+        <div className="m-16">
+        <Slider {...settings}>
         <div>
-        <image src="/news12.png" width="1200" height="200" alt="char weah"/>
+           <Image className="m-auto p-4" src="/ourStory.jpg" alt="image" width="500" height="200"/>
         </div>
         <div>
-            <h1 className="mt-32 sm:text-4xl text-2xl text-center font-bold">Meet Our Partners</h1>
-            <Image src="/merck.png" width="120" height="200" alt="merck"/>
-            <p>Merck Foundation More than a Mother Movement</p>
+        <Image className="m-auto p-4" src="/city_of_hope.jpeg" alt="image" width="500" height="200"/>
+     </div>
+     <div>
+     <Image className="m-auto p-4" src="/city_of_hope2.png" alt="image" width="500" height="200"/>
+  </div>
+  <div>
+  <Image className="m-auto p-4" src="/city_of_hope3.jpeg" alt="image" width="500" height="200"/>
+</div>
+     </Slider>
+        </div>
+        <div>
+            <h1 className="sm:text-6xl text-2xl text-center font-bold">Meet Our Partners</h1>
+            <Image className="m-auto mt-4" src="/merck.png" width="230" height="200" alt="merck"/>
+            <p className="text-center font-bold sm:text-2xl text-xl p-4 m-4">Merck Foundation More than a Mother Movement</p>
         </div>
         </div>
 
