@@ -27,7 +27,7 @@ function AboutUs() {
              disadvantaged girls and orphans at   85% completion, First Lady Clar Marie
               Weah is Passionate about improving the lives of less fortunate Liberians, 
         particularly empowering girls with education and skills.<br/>
-        <Link href="/" className='text-blue-800  text-center'>Read More</Link> </p>
+        <Link href="/story" className='text-blue-800  text-center'>Read More</Link> </p>
         </div>
         <h1 className='text-4xl text-center font-bold'>Our Motto</h1>
             <h1 className='sm:text-4xl text-center font-bold p-8'>&quot;to bless many children as God has bless me&quot;</h1>
@@ -56,7 +56,7 @@ function AboutUs() {
                     four pillars - Health, Education, Economic Empowerment, and Gender 
                     Equality - She&apos;s You Movement seeks the overall advancement
                     of women and girls for a better and prosperous Liberia.<br/>
-                    <Link href="/" className="text-blue-800">Read More</Link>
+                    <Link href="/ourFounder" className="text-blue-800">Read More</Link>
                 </p> 
             </div>
             <div className='items-center m-4 p-8' >
