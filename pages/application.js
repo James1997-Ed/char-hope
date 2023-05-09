@@ -102,15 +102,18 @@ function Application() {
                      </tr>
                      <tr>
                      <label htmlFor='honoree'>
-                       <td>Honoree Name</td>
+                       <td className='text-white'>Honoree Name</td>
                        </label>
                      </tr>
                      <tr>
                        <td><input id='honoree' name='honoree' value={formState.honoree} onChange={handleInputChange} placeholder='Enter Honoree Name' className='border border-gray-400 p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500'/></td>
                      </tr>
                      <tr>
-                       <td>How did you hear about us</td>
+                       <td className='text-white'>How did you hear about us</td>
                      </tr>
+                     <tr>
+                     <td><textarea id='aboutUs' name="aboutUs" placeholder='Enter some text here' className='rounded '></textarea></td>
+                   </tr>
                      <div className="m-4 p-4 mx-auto px-8 py-4">
                      <button type="submit" onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:text-2xl mx-auto sm:px-8 py-2 px-2 sm:py-4 rounded">
                         Donate

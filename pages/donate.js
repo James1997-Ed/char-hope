@@ -29,7 +29,7 @@ function DonateNow() {
          <div className='block sm:flex relative'>
   <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
     <div>
-      <Link href="/"><button className='px-4 py-2 sm:ml-16 ml-20 mt-4 border-gradient-to-r border-4
+      <Link href="/sponsor"><button className='px-4 py-2 sm:ml-16 ml-20 mt-4 border-gradient-to-r border-4
        from-blue-500 to-purple-0 text-blue-300 shadow-4xl sm:text-black font-bold text-2xl
        rounded hover:text-white hover:bg-blue-700 border-blue-400'>
         Sponsor Now

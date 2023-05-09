@@ -56,7 +56,7 @@ function AboutUs() {
                     four pillars - Health, Education, Economic Empowerment, and Gender 
                     Equality - She&apos;s You Movement seeks the overall advancement
                     of women and girls for a better and prosperous Liberia.<br/>
-                    <Link href="/" className="text-blue-800">Read More</Link>
+                    <Link href="/story" className="text-blue-800">Read More</Link>
                 </p> 
             </div>
             <div className='items-center m-4 p-8' >
