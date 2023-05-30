@@ -23,10 +23,10 @@ function Services() {
         <div className='block sm:flex mt-20'>
           <div>
           <div className='items-center'>
-            <Image src="/help2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
+            <Image src="/baby2.png" alt="image" width="100" height="100" className="mx-auto"/>
           </div>
         <div className='text-center'>
-          <h1 className='text-2xl font-bold'>Health</h1>
+          <h1 className='text-xl font-bold'>Health</h1>
           <p>Ending all forms of
           sexual Gender-Based Violence.
           Ending maternal and
@@ -38,7 +38,7 @@ function Services() {
             <Image src="/new2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
           </div>
         <div className='text-center'>
-          <h1 className='text-2xl font-bold'>Education</h1>
+          <h1 className='text-xl font-bold'>Education</h1>
           <p>Financial Aid 
           Training opportunities
           For medical pactional.</p>
@@ -46,10 +46,10 @@ function Services() {
           </div>
           <div>
           <div>
-            <Image src="/help2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
+            <Image src="/images2.png" alt="image" width="150" height="100" className="mx-auto"/>
           </div>
         <div className='text-center'>
-          <h1 className='text-2xl font-bold'>Economic Empowerment</h1>
+          <h1 className='text-xl font-bold'>Economic Empowerment</h1>
           <p>Women empowerment through
           agriculture vocational training 
           opportunities for woman and youth.</p>
@@ -57,10 +57,10 @@ function Services() {
           </div>
           <div>
           <div>
-            <Image src="/help2.jpg" alt="image" width="100" height="100" className="mx-auto"/>
+            <Image src="/man2.png" alt="image" width="150" height="100" className="mx-auto"/>
           </div>
         <div className='text-center'>
-          <h1 className='text-2xl font-bold'>Gender Equality</h1>
+          <h1 className='text-xl font-bold'>Gender Equality</h1>
           <p>Advocacy</p>
         </div>
           </div>

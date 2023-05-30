@@ -35,8 +35,8 @@ function DonateNow() {
         Sponsor Now
       </button>
       </Link>
-      <h1 className='text-black text-center  sm:text-blue-500  mt-4 font-bold sm:text-2xl'>
-        Sponsor A Child Today and Give Him/Her A Brighter Tomorrow
+      <h1 className='text-black text-left sm:text-center  sm:text-blue-500  mt-4 font-bold text-2xl sm:text-4xl'>
+        Sponsor A Child Today and<br/> Give Him/Her A <br/>Brighter Tomorrow
       </h1>
     </div>
   </div>

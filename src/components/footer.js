@@ -14,10 +14,10 @@ function Footer() {
         <Link href="/"><AiOutlineTwitter className='m-2' size={33}/></Link>
       </div>
          <div className ="sm:block">
-         <Link href="/" className="mx-2 sm:mx-2">
+         <Link href="/donate" className="mx-2 sm:mx-2">
          <button className="sm:px-6 sm:py-4 sm:m-16 bg-white text-black font-bold border border-white hover:bg-white hover:text-black">Donate Now!</button>
        </Link>
-       <Link href="/" className="mx-4 sm:mx-8">
+       <Link href="/application" className="mx-4 sm:mx-8">
          <button className="sm:px-6 sm:py-4  sm:m-16 bg-white text-black font-bold border border-white  hover:bg-white hover:text-black">Applied!</button>
        </Link>
          </div>

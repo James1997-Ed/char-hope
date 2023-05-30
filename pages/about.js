@@ -77,7 +77,7 @@ function AboutUs() {
             City of Hope: a multipurpose complex under construction by
              Clar Hope foundation to provide quality education to 200 girls
               ages 3-5 and life skills to street girls and disadvantaged
-             youth thereby restoring their hope for a brighter furture.
+             youth thereby restoring their hope for a brighter future.
             </p>
             <p className='p-2'>
                 Training of over 40 Medical practitioners: in partnership with Merck 

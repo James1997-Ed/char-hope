@@ -30,25 +30,25 @@ function NavBar() {
     <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScroll ? 'bg-white shadow': 'hidden'}`}>
         <div className="flex-col md:flex-row hidden sm:flex items-center justify-between shadow">
             <div>
-            <Link href="/"><Image src ="/logo.png" alt="react imag" width="300" height="100" className="w-48 md:w-auto h-auto"/></Link>
+            <Link href="/"><Image src ="/logo.png" alt="react imag" width="400" height="100" className="w-48 md:w-auto h-auto"/></Link>
             </div>
         <div className="flex items-center mt-4 md:mt-0">
           <nav className="flex list-none">
                 <ul className="flex m-8">
                     <li>
-                        <Link href="/" className="font-bold p-2 text-xl text-blue-700 hover:text-black border border-black mr-8 rounded hover:text-black">Home</Link>
+                        <Link href="/" className="font-bold p-2 text-xl text-blue-700 hover:text-black border border-black mr-8 rounded">Home</Link>
                     </li>
                     <li>
-                        <Link href="/about" className="text-xl text-gray-700 hover:text-black mr-8">About Us</Link>
+                        <Link href="/about" className="text-xl text-gray-700 hover:text-blue-700 mr-8">About Us</Link>
                     </li>
                     <li>
-                        <Link href="/services" className="text-xl text-gray-700 hover:text-black mr-8">Service</Link>
+                        <Link href="/services" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Service</Link>
                     </li>
                     <li>
-                        <Link href="/application" className="text-xl text-gray-700 hover:text-black mr-8">Application</Link>
+                        <Link href="/application" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Application</Link>
                     </li>
                     <li>
-                        <Link href="/donate" className="text-xl text-gray-700 hover:text-black mr-8">Donate Now</Link>
+                        <Link href="/donate" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Donate Now</Link>
                     </li>
                 </ul>
           </nav>

@@ -14,8 +14,8 @@ function LayoutDefault() {
    </div>
    <div className="block sm:flex justify-center text-center z-10 top-50% ">
      <Link href="/donate"><button className="p-2 bg-black text-white sm:text-2xl font-bold m-2 sm:m-4 sm:block underlin hover:bg-white hover:text-black">Donate Now!</button></Link>
-     <Link href="/applied"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 sm:m-4 sm:block hover:bg-white hover:text-black">Applied!</button></Link>
-     <Link href="/subscribe"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Subscribe!</button></Link>
+     <Link href="/application"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 sm:m-4 sm:block hover:bg-white hover:text-black">Applied!</button></Link>
+     <Link href="/"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Subscribe!</button></Link>
    </div>
     </div>
     <div className="sm:flex block">
@@ -35,11 +35,10 @@ function LayoutDefault() {
       <p>It&apos;s not how much we give but how much love we put into giving.</p>
     </div>
   </div>
-  
         <h1 className="text-center font-bold text-2xl sm:text-4xl underline">Our Charity</h1>
         <div className="sm:flex block p-8 text-center">
-          <div className="p-4">
-             <Image src="/children.png" alt="say" width="300" height="200" className="pl-2"/>
+          <div className="">
+             <Image src="/children.png" alt="say" width="400" height="200" className="m-auto"/>
              <h1 className="font-bold text-xl">She&apos;s You Menstrual & Personal
              Hygiene Initiative</h1>
              <p>Reproductive Health - Menstrual
@@ -50,8 +49,8 @@ function LayoutDefault() {
              challenges in line with
              menstruation.</p>
           </div>
-              <div className="p-4">
-                <Image src="/china.png" alt="china.png" width="300" height="100" className="ml-2"/>
+              <div className="sm:p-4">
+                <Image src="/china.png" alt="china.png" width="300" height="100" className="sm:ml-2"/>
                 <h1 className="font-bold text-xl">Empowerment Program</h1>
                 <p>Training of 30 adolescent girls  in China.
                 Aimed to provide basic life skills to enable girls to make a decent living and improving their lives.
