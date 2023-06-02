@@ -7,8 +7,8 @@ function LayoutDefault() {
     <div className ="">
     <div className="">
     <div className ="m-2 block">
-    <video autoPlay loop className="w-500 sm:w-full h-300 sm:h-full object-cover">
-       <source src="/Clar_hope.mp4" type="video/mp4" />
+    <video autoPlay="true" loop className="w-500 sm:w-full h-300 sm:h-full object-cover">
+       <source src="/Char_hope.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
    </div>
@@ -50,7 +50,7 @@ function LayoutDefault() {
              menstruation.</p>
           </div>
               <div className="sm:p-4">
-                <Image src="/china.png" alt="china.png" width="300" height="100" className="sm:ml-2"/>
+                <Image src="/china.png" alt="china.png" width="300" height="200" className="sm:ml-2"/>
                 <h1 className="font-bold text-xl">Empowerment Program</h1>
                 <p>Training of 30 adolescent girls  in China.
                 Aimed to provide basic life skills to enable girls to make a decent living and improving their lives.
@@ -58,7 +58,7 @@ function LayoutDefault() {
                 production was fully funded by the Clar Hope Foundation in 2019.</p>
               </div>
               <div className="p-4">
-              <Image src="/children2.png" alt="children2.png" width="300" height="100" className="pl-2 ml-4 items-center"/>
+              <Image src="/children2.png" alt="children2.png" width="300" height="200" className="pl-2 m-auto items-center"/>
               <h1 className="font-bold text-xl">The CHF is lunching a She&apos;s You Project</h1>
               <p>Educating and empowering the most vulnerable
               women and girls and particularly those living with disabilities. 

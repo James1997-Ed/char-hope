@@ -22,20 +22,35 @@ function Application() {
       }))
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(formState);
-      setFormState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        honoree: '',
-        donate_type: '',
-        dataText: ''
-      })
-      toast.success("Form submitted Successfully");
-      
-    }
+      if (formState.firstName.trim()== "") {
+        toast.error("Form not submitted. Please fill in all required fields.");
+        return;
+      }
+      if (formState.lastName.trim()== "") {
+        toast.error("Form not submitted. Please fill in all required fields.");
+        return;
+      } 
+      if (formState.email.trim() === '') {
+        toast.error("Please enter your email.");
+        return;
+      }
+      else {
+        // Form is valid, perform submission logic here
+        console.log(formState);
+        setFormState({
+          firstName: '',
+          lastName: '',
+          email: '',
+          honoree: '',
+          donate_type: '',
+          dataText: ''
+        });
+        toast.success("Form submitted successfully");
+      }
+    };
+    
   return (
     <div>
       <div>
@@ -61,8 +76,10 @@ function Application() {
               <div>
                 <p>Applicant should read the instruction below to know if they are  to apply.</p>
                 <p>Tell us your story: why should you or recommendation be considered for the program of interest?</p>
+                <label htmlFor='dataText'>
                 <textarea id='dataText' name="dataText" type="text" className="w-full p-4 mt-4 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300" rows="4" placeholder='Enter why we should recommend you'>
                 </textarea>
+                </label>
               </div>
             </div>
                <div className='bg-green-900 p-8 m-12  '>
@@ -91,7 +108,7 @@ function Application() {
                      <tr className='block sm:flex'>
                        <td><input id='email' name='email' type="email" value={formState.email} onChange={handleInputChange} placeholder='Enter Email' className='border border-gray-400 p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500'/></td>
                      </tr>
-                     <tr className='block sm:flex'>
+                     <tr className='block sm:flex sm:pt-4'>
                      <label htmlFor="donate_type" className="font-bold text-white p-2 mb-2">Donate in the name of:</label>
                      <select id="donate_type" value={formState.donate_type} name="donate_type" onChange={handleInputChange} className="border rounded p-2">
                        <option id='opt1' className="py-2"></option>
@@ -112,7 +129,10 @@ function Application() {
                        <td className='text-white'>How did you hear about us</td>
                      </tr>
                      <tr>
-                     <td><textarea id='aboutUs' name="aboutUs" placeholder='Enter some text here' className='rounded '></textarea></td>
+                     <td><label htmlFor='dataText'>
+                     <textarea id='dataText' name="dataText" placeholder='Enter some text here' className='rounded '></textarea>
+                     </label>
+                     </td>
                    </tr>
                      <div className="m-4 p-4 mx-auto px-8 py-4">
                      <button type="submit" onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold sm:text-2xl mx-auto sm:px-8 py-2 px-2 sm:py-4 rounded">

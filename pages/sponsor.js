@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function SponsorUs() {
   return (
@@ -12,7 +13,7 @@ function SponsorUs() {
       </div>
       <div className='block sm:flex'>
         <div className=''>
-        <h1 className='font-bold text-4xl sm:text-8xl p-4'>What is Sponsorship </h1>
+        <h1 className='font-bold text-4xl sm:text-6xl p-4'>What is Sponsorship </h1>
         <h1 className='text-xl sm:text-4xl p-8 sm:pl-8'>When you sponsor a child, you care and encourage them through letter <br/> writing and financial support. That support empowers
         them individually historically <br/> meet their needs in a loving, safe community<br/> where they can learn, grow, play and dream.
         It&quot;s a relationship more powerful than poverty-changing their life and yours!</h1>
@@ -28,7 +29,7 @@ function SponsorUs() {
       
       </div>
         <div className='flex justify-center'>
-          <button className='bg-pink-500 sm:p-4 sm:text-4xl rounded p-2  text-center text-white'>Sponsor Now</button>
+         <Link href="/contact"><button className='bg-pink-500 sm:p-4 sm:text-4xl rounded p-4 text-2xl font-bold text-center text-white'>Sponsor Now</button></Link>
         </div>
       <div className='p-12'>
          <h1 className='text-4xl font-bold p-4 pt-12'><i>Our Work</i></h1>

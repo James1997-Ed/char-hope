@@ -35,6 +35,21 @@ function ContactUs() {
 
     const handleSubmit = (e)=>{
       e.preventDefault();
+      if(formState.name.trim()==""){
+         toast.error("Please fill out this field it is required");
+         return;
+      }
+      if(formState.address.trim()==""){
+        toast.error("Please fill out this field it is required");
+        return;
+     }    if(formState.email.trim()==""){
+      toast.error("Please fill out this field it is required");
+      return;
+   }
+   if(formState.city.trim()==""){
+    toast.error("Please fill out this field it is required");
+    return;
+ }
       console.log(formState)
       setFormState({
         name: '',
@@ -440,7 +455,7 @@ function ContactUs() {
                  type='text'
                  name='signature'
                  required='Please fill in this field'
-                 className='border border-gray-400 p-2 m-4 rounded-md focus:outline-none w-full focus:ring-2 focus:ring-blue-500'
+                 className='border border-gray-400 p-2 m-4 sm:ml-8 rounded-md focus:outline-none w-full focus:ring-2 focus:ring-blue-500'
                  value={formState.signature}
                  onChange={handleInputChange}
                />
@@ -454,7 +469,7 @@ function ContactUs() {
                  type='text'
                  name='name2'
                  required='Please fill in this field'
-                 className='border border-gray-400 p-2 m-4 rounded-md focus:outline-none w-full focus:ring-2 focus:ring-blue-500'
+                 className='border border-gray-400 p-2 m-4 sm:ml-12 rounded-md focus:outline-none w-full focus:ring-2 focus:ring-blue-500'
                  value={formState.num2}
                  onChange={handleInputChange}
                />

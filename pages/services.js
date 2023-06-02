@@ -3,21 +3,21 @@ import Image from 'next/image'
 
 function Services() {
   return (
-    <div className='mx-20 my-2'>
+    <div className='sm:mx-20 sm:my-2 m-4'>
       <div className='mt-32'>
         <div>
           <h1 className='text-4xl m-8 font-bold text-center'>Our Services</h1>
           <h1 className='text-2xl m-2 font-bold text-center'>We&apos;re glad that you&apos;re here!</h1>
         </div>
         <div className='block sm:flex'>
-          <div className='m-2'>
+          <div className='sm:m-2 m-4'>
           <Image src="/Dist.png" alt="image" width="400" height="400"/>
           </div>
-          <div className='m-2'>
+          <div className='sm:m-2 m-4'>
             <Image src="/new5.png" alt="image" width="400" height="400"/>
           </div>
-          <div className='m-2'>
-           <Image src="/new5.png" alt="image" width="400" height="400"/>
+          <div className='sm:m-2 m-4'>
+           <Image src="/new5.png" alt="image" width="400" height="200"/>
         </div>
         </div>
         <div className='block sm:flex mt-20'>

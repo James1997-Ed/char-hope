@@ -8,11 +8,11 @@ function AboutUs() {
       <div>
         <div className='block sm:flex m-16 pt-12 '>
           <div>
-            <h1 className='sm:text-4xl text-4xl font-bold m-16 '>About Us</h1>
+            <h1 className='sm:text-6xl text-4xl font-bold sm:m-16 px-8 sm:py-32 text-center '>About Us</h1>
           </div>
          <div>
-              <video autoPlay loop className="w-200  h-200 ">
-              <source src="/Clar_hope.mp4" type="video/mp4" />
+              <video autoPlay loop className="w-100  h-100 ">
+              <source src="/Char_hope.mp4" type="video/mp4" />
               Your browser does not support the video tag.
              </video>
            </div>
@@ -27,7 +27,7 @@ function AboutUs() {
              disadvantaged girls and orphans at   85% completion, First Lady Clar Marie
               Weah is Passionate about improving the lives of less fortunate Liberians, 
         particularly empowering girls with education and skills.<br/>
-        <Link href="/" className='text-blue-800  text-center'>Read More</Link> </p>
+        <Link href="/founder" className='text-blue-800  text-center'>Read More</Link> </p>
         </div>
         <h1 className='text-4xl text-center font-bold'>Our Motto</h1>
             <h1 className='sm:text-4xl text-center font-bold p-8'>&quot;to bless many children as God has bless me&quot;</h1>
