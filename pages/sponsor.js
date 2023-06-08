@@ -39,11 +39,11 @@ function SponsorUs() {
       <div className='block sm:flex justify-between p-16'>
         <div >
           <Image className='m-auto' src="/earth2.png" alt="image" width="200" height="100"/>
-          <h1 className='text-4xl'>Across Countries and <br/>Countries Served</h1>
+          <h1 className='text-4xl sm:text-left text-center'>Across Countries and Countries Served</h1>
         </div>
         <div className='pb-4'>
           <Image className='m-auto' src="/students.jpg" alt="earth" width="280" height="100"/>
-          <h1 className='text-4xl'>Several Children <br/> Help since 2018</h1>
+          <h1 className='text-4xl sm:text-left text-center'>Several Children Help since 2018</h1>
         </div>
       </div>
     </div>

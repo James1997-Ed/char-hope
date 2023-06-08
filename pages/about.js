@@ -18,7 +18,7 @@ function AboutUs() {
            </div>
         </div>
         <div className='items-center' >
-        <p className='m-16 sm:text-xl sm:p-2'>Clar Hope Foundation was founded in 2018 by the First Lady
+        <p className='m-4 p-2 sm:text-xl text-2xl  sm:p-2'>Clar Hope Foundation was founded in 2018 by the First Lady
          of Liberia, Madam Clar Marie Weah a non-political and non-profit
           organization, in an effort to create an equitable society in Liberia
            where women and children (in particular), are healthy, educated and
@@ -27,7 +27,8 @@ function AboutUs() {
              disadvantaged girls and orphans at   85% completion, First Lady Clar Marie
               Weah is Passionate about improving the lives of less fortunate Liberians, 
         particularly empowering girls with education and skills.<br/>
-        <Link href="/founder" className='text-blue-800  text-center'>Read More</Link> </p>
+
+        <Link href="/story" className='text-blue-800  text-center'>Read More</Link> </p>
         </div>
         <h1 className='text-4xl text-center font-bold'>Our Motto</h1>
             <h1 className='sm:text-4xl text-center font-bold p-8'>&quot;to bless many children as God has bless me&quot;</h1>
@@ -35,7 +36,7 @@ function AboutUs() {
             <h1 className='sm:text-4xl text-2xl text-center font-bold'>About Our Founder</h1>
         </div>
         <div className='block sm:flex'>
-            <div className='items-center sm:text-xl m-4 p-8'>
+            <div className='items-center sm:text-xl m-2 text-2xl p-4'>
                 <p className='p-2'>
                     A Nurse by profession, successful business women, and Humanitarian,
                     Mrs Clar M. Weah passion to help the underprivileged dates long before
@@ -56,7 +57,7 @@ function AboutUs() {
                     four pillars - Health, Education, Economic Empowerment, and Gender 
                     Equality - She&apos;s You Movement seeks the overall advancement
                     of women and girls for a better and prosperous Liberia.<br/>
-                    <Link href="/story" className="text-blue-800">Read More</Link>
+                    <Link href="/ourFounder" className="text-blue-800">Read More</Link>
                 </p> 
             </div>
             <div className='items-center m-4 p-8' >
@@ -66,7 +67,7 @@ function AboutUs() {
         <div className='bg-blue-400 text-white m-2 sm:mb-4 p-8'>
           <h1 className='sm:text-4xl text-2xl text-center font-bold'>Our Achievements</h1>
         </div>
-        <div className='items-center sm:text-xl m-4 p-8'>
+        <div className='items-center sm:text-xl text-2xl sm:m-4 m-2 sm:p-8 p-2'>
             <p className='p-2'>
             Clar Hope Foundation: Construction of Decontee Home for the Elderly,
              Constructed in Buchana, Grand Bassa County through Clar Hope Foundation,
@@ -82,7 +83,8 @@ function AboutUs() {
             <p className='p-2'>
                 Training of over 40 Medical practitioners: in partnership with Merck 
                 Foundation, at least 40 medical practitioners including doctors have been trained in 
-                various specialties in oncology, gynecology, embryology among others.
+                various specialties in oncology, gynecology, embryology among others.<br/>
+                <Link href="/ourAchievements" className='text-blue-800  text-center'>Read More</Link>
             </p>
         </div>
       </div>
