@@ -73,7 +73,7 @@ export default function Dashboard() {
             <Typography variant="body1">Donation: {document.donation500}</Typography>
             <Typography variant="body1">Donation: {document.donation1000}</Typography>
             {/* Add other fields as needed */}
-            <button onClick={() => handleDelete(document.id)}>Delete</button>
+            <button onClick={() => handleDelete(document.id)} className='p-2 text-xl m-2 hover:bg-red-700 rounded font-bold hover:text-white bg-blue-400'>Delete</button>
           </DocumentCard>
         ))}
       </DashboardContainer>
