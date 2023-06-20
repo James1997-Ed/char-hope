@@ -75,7 +75,7 @@ export default function ourAchievements(){
               </p>
               <Slider {...settings}>
               <div className="">
-                 <Image className="m-auto p-4" src="/city_of_hope4.jpg" alt="image" width="500" height="200"/>
+                 <Image className="m-auto p-4 sm:w-56 sm:h-56" src="/city_of_hope4.jpg" alt="image" width="500" height="200"/>
               </div>
               <div className="w-full h-full m-2">
               <Image className="m-auto p-4" src="/city_of_hope.jpeg" alt="image" width="500" height="200"/>
@@ -95,13 +95,19 @@ export default function ourAchievements(){
               Your browser does not support the video tag.
              </video>
            </div>
+           <div className="m-2 mb-20">
+              <video autoPlay loop className="w-200   h-200 ">
+              <source src="/Char_hope.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+             </video>
+           </div>
           </div>
           <div className="block sm:flex">
           <p className="mt-16 sm:p-16 text-2xl m-2">Training of over 40 Medical practitioners: in partnership
              with Merck Foundation, at least 40 medical practitioners including 
              doctors have been trained in various specialties in oncology, gynecology,
               embryology among others</p>
-            <Image src="/china2.jpg" width="400" height="200" alt="image"/>
+            <Image src="/china2.jpg" width="400" height="200" alt="image" className="mb-8"/>
           </div>
         </div>
   

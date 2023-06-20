@@ -25,7 +25,7 @@ function Application() {
       }))
     }
 
-    const submission = collection (db,"applicationData");
+    const submission = collection (db,"ApplicationData");
   
 
     const handleSubmit = (e) => {

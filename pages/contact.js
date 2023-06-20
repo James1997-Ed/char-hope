@@ -2,11 +2,13 @@ import React from 'react'
 import { useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addDoc, collection } from 'firebase/firestore';
+import {db} from '../firebaseConfig'
 
 function ContactUs() {
-
-    const [formState, setFormState] = useState({
-       name: '',
+    
+    const initialState={
+      name: '',
        address: '',
        city: '',
        country: '',
@@ -14,26 +16,42 @@ function ContactUs() {
        email: '',
        number: '',
        childName: '',
-       child: '',
-       child1: '',
-       donation: '',
-       num1: '',
-       payment: '',
+       girlChild: 'Girl',
+       boyChild: 'Boy',
+       child:'',
+       eitherChild:'ether',
+       teenage:'TeenAge',
+       generalDonation:'',
+       donation50:50,
+       donation100:100,
+       donation500:500,
+       donation1000:1000,
+       donationOther:'',
+       monthlyPayment:'',
+       selfPayment:'',
+       specificCity:'',
+       payment_method: '',
        place: '',
        signature: '',
        name2: ''
+    }
+    const [formState, setFormState] = useState(initialState)
 
-    })
 
     const handleInputChange = (e) =>{
-      const {name, value} = e.target
+      const {name, value, type, checked} = e.target
+      const inputValue = type === "checkbox" ? checked :value
       setFormState((prevState) => ({
         ...prevState, 
-        [name]:value
+        [name]:inputValue,
       }))
     }
-
+    const donation = collection(db, "Donation")
     const handleSubmit = (e)=>{
+
+      addDoc(donation, {...formState})
+      console.log(formState)
+      setFormState(initialState)
       e.preventDefault();
       if(formState.name.trim()==""){
          toast.error("Please fill out this field it is required");
@@ -50,25 +68,6 @@ function ContactUs() {
     toast.error("Please fill out this field it is required");
     return;
  }
-      console.log(formState)
-      setFormState({
-        name: '',
-        address: '',
-        city: '',
-        country: '',
-        county: '',
-        email: '',
-        number: '',
-        childName: '',
-        child: '',
-        child1: '',
-        donation: '',
-        num1: '',
-        payment: '',
-        place: '',
-        signature: '',
-        name2: ''
-      })
       toast.success("Form submitted Successfully");
     }
 
@@ -207,234 +206,259 @@ function ContactUs() {
         <i>Sponsorship Details</i>
         </h1>
         <form onSubmit={handleSubmit} className='sm:block p-4'>
-        <label htmlFor='childName' className='font-bold text-xl'>
         <input
-             id='childName'
-             type='checkbox'
-             name='childName'
-             required='Please fill in this box'
-             className='mr-2'
-             value={formState.childName}
-             onChange={handleInputChange}
-           />
-        I already know my child, name of child:
+          id='childName'
+          type='checkbox'
+          name='childName'
+          value={formState.childName}
+          required='Please fill in this box'
+          className='mr-2'
+          checked={formState.childName}
+          onChange={handleInputChange}
+        />
+        <label htmlFor='childName' className='font-bold text-xl'>
+          I already know my child, name of child:
         </label>
         <h1 className='font-bold text-xl'>I would like to help a:</h1>
         <table>
-        <tr>
-            <td>
-            <label htmlFor='child' className='font-bold text-xl'>
+          <tbody>
+            <tr>
+              <td>
                 <input
-                id='child'
-                type='checkbox'
-                name='child'
-                required='Please fill in this box'
-                className='mr-2'
-                value={formState.child}
-                onChange={handleInputChange}
+                  id='girlChild'
+                  type='checkbox'
+                  name='girlChild'
+                  value={formState.girlChild}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.girlChild}
+                  onChange={handleInputChange}
                 />
-        Girl
-      </label>
-    </td>
-    <td>
-      <label htmlFor='child' className='font-bold text-xl'>
-        <input
-          id='child'
-          type='checkbox'
-          name='child'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.child}
-          onChange={handleInputChange}
-        />
-        Boy
-      </label>
-    </td>
-    <td>
-      <label htmlFor='child' className='font-bold text-xl'>
-        <input
-          id='child'
-          type='checkbox'
-          name='child'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.child}
-          onChange={handleInputChange}
-        />
-        Either
-      </label>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <label htmlFor='child1' className='font-bold text-xl'>
-        <input
-          id='child1'
-          type='checkbox'
-          name='child1'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.child1}
-          onChange={handleInputChange}
-        />
-        Child
-      </label>
-    </td>
-    <td>
-      <label htmlFor='child1' className='font-bold text-xl'>
-        <input
-          id='child1'
-          type='checkbox'
-          name='child1'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.child1}
-          onChange={handleInputChange}
-        />
-        Teenage
-      </label>
-    </td>
-    <td>
-      <label htmlFor='child1' className='font-bold text-xl'>
-        <input
-          id='child1'
-          type='checkbox'
-          name='child1'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.child1}
-          onChange={handleInputChange}
-        />
-        From a specific city
-      </label>
-    </td>
-  </tr>
-  <tr>
-    <td colSpan='3'>
-      <label htmlFor='donation' className='font-bold text-xl'>
-        <input
-          id='donation'
-          type='checkbox'
-          name='donation'
-          required='Please fill in this box'
-          className='mr-2'
-          value={formState.donation}
-          onChange={handleInputChange}
-        />
-        I just want to make a general monthly donation:
-      </label>
-    </td>
-  </tr>
-</table>
-</form>
+                <label htmlFor='girlChild' className='font-bold text-xl'>
+                  Girl
+                </label>
+              </td>
+              <td>
+                <input
+                  id='boyChild'
+                  type='checkbox'
+                  name='boyChild'
+                  value={formState.boyChild}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.boyChild}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='boyChild' className='font-bold text-xl'>
+                  Boy
+                </label>
+              </td>
+              <td>
+                <input
+                  id='eitherChild'
+                  type='checkbox'
+                  name='eitherChild'
+                  value={formState.etherChild}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.eitherChild}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='eitherChild' className='font-bold text-xl'>
+                  Either
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  id='child'
+                  type='checkbox'
+                  name='child'
+                  value={formState.child}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.child}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='child' className='font-bold text-xl'>
+                  Child
+                </label>
+              </td>
+              <td>
+                <input
+                  id='teenage'
+                  type='checkbox'
+                  name='teenage'
+                  value={formState.teenage}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.teenage}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='teenage' className='font-bold text-xl'>
+                  Teenage
+                </label>
+              </td>
+              <td>
+                <input
+                  id='specificCity'
+                  type='checkbox'
+                  name='specificCity'
+                  value={formState.specificCity}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.specificCity}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='specificCity' className='font-bold text-xl'>
+                  From a specific city
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colSpan='3'>
+                <input
+                  id='generalDonation'
+                  type='checkbox'
+                  name='generalDonation'
+                  value={formState.generalDonation}
+                  required='Please fill in this box'
+                  className='mr-2'
+                  checked={formState.generalDonation}
+                  onChange={handleInputChange}
+                />
+                <label htmlFor='generalDonation' className='font-bold text-xl'>
+                  I just want to make a general monthly donation:
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      
 </div>
 <div className='sm:p-12 sm:mx-32'>
 <h1 className='sm:text-left text-center font-bold text-4xl'>Donation Details</h1>
 <h1 className='sm:text-left text-center text-2xl pt-4 font-bold'>Sponsorship</h1>
 <form onSubmit={handleSubmit} className='m-4 ml-'>
-<table>
-  <tr>
-    <td>
-      <label htmlFor='num1' className='font-bold text-xl' >
-      <input
-             id='num1'
-                 type='checkbox'
-                     name='num1'
-                     required='Please fill in this box'
-                className='m-2'
-                value={formState.num1}
-                onChange={handleInputChange}
-                 />
-      $50
-      </label>
-      </td>
-      <td>
-      <label htmlFor='num1' className='font-bold text-xl'>
-      <input
-                         id='num1'
-                         type='checkbox'
-                         name='num1'
-                         required='Please fill in this box'
-                         className='m-2'
-                         value={formState.num1}
-                         onChange={handleInputChange}
-                       />
-      $100
-      </label>
-      </td>
-      <td>
-      <label htmlFor='num1' className='font-bold text-xl'>
-      <input
-                         id='num1'
-                         type='checkbox'
-                         name='num1'
-                         required='Please fill in this box'
-                         className='m-2'
-                         value={formState.num1}
-                         onChange={handleInputChange}
-                       />
-      $500
-      </label>
-      </td>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            id='donation50'
+            type='checkbox'
+            name='donation50'
+            value={formState.donation50}
+            required='Please fill in this box'
+            className='m-2'
+            checked={formState.donation50}
+            onChange={handleInputChange}
+          />
+          <label htmlFor='donation50' className='font-bold text-xl'>
+            $50
+          </label>
+        </td>
+        <td>
+          <input
+            id='donation100'
+            type='checkbox'
+            name='donation100'
+            value={formState.donation100}
+            required='Please fill in this box'
+            className='m-2'
+            checked={formState.donation100}
+            onChange={handleInputChange}
+          />
+          <label htmlFor='donation100' className='font-bold text-xl'>
+            $100
+          </label>
+        </td>
+        <td>
+          <input
+            id='donation500'
+            type='checkbox'
+            name='donation500'
+            value={formState.donation500}
+            required='Please fill in this box'
+            className='m-2'
+            checked={formState.donation500}
+            onChange={handleInputChange}
+          />
+          <label htmlFor='donation500' className='font-bold text-xl'>
+            $500
+          </label>
+        </td>
       </tr>
       <tr>
-      <td>
-      <label htmlFor='num1' className='font-bold text-xl'>
-      <input id='num1' type='checkbox'
-       name='num1'required='Please fill in this box' 
-       className='m-2'
-       value={formState.num1}
-       onChange={handleInputChange}
-       />
-         $1000
-      </label>
-      </td>
-      <td>
-      <label htmlFor='num1' className='font-bold text-xl'>
-      <input
-            id='num1'
+        <td>
+          <input
+            id='donation1000'
             type='checkbox'
-            name='num1'
-            required='Please fill in this box' className='m-2'
-            value={formState.num1}
+            name='donation1000'
+            value={formState.donation1000}
+            required='Please fill in this box'
+            className='m-2'
+            checked={formState.donation1000}
             onChange={handleInputChange}
-            />
-      Other amount
-      </label>
-      </td>
+          />
+          <label htmlFor='donation1000' className='font-bold  text-xl'>
+            $1000
+          </label>
+        </td>
+        <td>
+          <input
+            id='donationOther'
+            type='checkbox'
+            name='donationOther'
+            value={formState.donationOther}
+            required='Please fill in this box'
+            className='m-2'
+            checked={formState.donationOther}
+            onChange={handleInputChange}
+          />
+          <label htmlFor='donationOther' className='font-bold text-xl'>
+            Other amount
+          </label>
+        </td>
       </tr>
-      </table>
-      <h1 className='font-bold text-4xl m-8'>Payment Method</h1>
-      <label htmlFor='payment' className='font-bold text-xl'>
-      <input
-                   id='payment'
-                   type='checkbox'
-                   name='payment'
-                   required='Please fill in this box'
-                   className='m-2'
-                   value={formState.payment}
-                   onChange={handleInputChange}
-                 />
-      I would like CHF to setup the monthly Payments
-      </label>
-      <br />
-      <label htmlFor='payment' className='font-bold text-xl'>
-      <input
-                   id='payment'
-                   type='checkbox'
-                   name='payment'
-                   required='Please fill in this box'
-                   className='m-2'
-                   value={formState.payment}
-                   onChange={handleInputChange}
-                 />
-      I choose to setup a monthly payment myself (Bank information will be sent to you)
-      </label>
-      </form>
+    </tbody>
+  </table>
+  <h1 className='font-bold text-4xl m-8'>Payment Method</h1>
+  <input
+    id='monthlyPayment'
+    type='checkbox'
+    name='monthlyPayment'
+    value={formState.monthlyPayment}
+    required='Please fill in this box'
+    className='m-2'
+    checked={formState.monthlyPayment}
+    onChange={handleInputChange}
+  />
+  <label htmlFor='monthlyPayment' className='font-bold text-xl'>
+    I would like CHF to setup the monthly Payments
+  </label>
+  <br />
+  <input
+    id='selfPayment'
+    type='checkbox'
+    name='selfPayment'
+    value={formState.selfPayment}
+    required='Please fill in this box'
+    className='m-2'
+    checked={formState.selfPayment}
+    onChange={handleInputChange}
+  />
+  <label htmlFor='selfPayment' className='font-bold text-xl'>
+    I choose to setup a monthly payment myself (Bank information will be sent to you)
+  </label>
+</form>
+
       </div>
       <h1 className='sm:mx-32 text-center font-bold text-4xl'>Signature and Authorization</h1>
       <form onSubmit={handleSubmit} className='p-12 sm:mx-32 block sm:flex'>
-      <label htmlFor='signature'>
+      <label htmlFor='place'>
       Place/Date*
       <br/>
       <input

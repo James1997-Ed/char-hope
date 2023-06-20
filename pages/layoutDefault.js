@@ -15,7 +15,7 @@ function LayoutDefault() {
    <div className="block sm:flex justify-center text-center z-10 top-50% ">
      <Link href="/donate"><button className="p-2 bg-black text-white sm:text-2xl font-bold m-2 sm:m-4 sm:block underlin hover:bg-white hover:text-black">Donate Now!</button></Link>
      <Link href="/application"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 sm:m-4 sm:block hover:bg-white hover:text-black">Applied!</button></Link>
-     <Link href="/"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Subscribe!</button></Link>
+     <Link href="/login"><button className="p-2 bg-black text-white sm:text-2xl font-bold sm:ml-8 m-2 sm:m-4 sm:block hover:bg-white hover:text-black">Dashboard</button></Link>
    </div>
     </div>
     <div className="sm:flex block">
