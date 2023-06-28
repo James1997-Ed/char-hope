@@ -61,7 +61,7 @@ export default function Dashboard() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <DashboardContainer>
+      <DashboardContainer className='block sm:flex'>
         {data.map((document) => (
           <DocumentCard key={document.id}>
             <Typography variant="h5">Name: {document.name}</Typography>

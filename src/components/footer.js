@@ -8,13 +8,13 @@ function Footer() {
   return (
     <div className="mx-auto flex flex-col md:flex-row bg-black text-white">
       <div className="text-center md:text-left">
-      <h3 className="font-bold text-xl m-2">Char Hope Foundation</h3>
+      <h3 className="font-bold text-2xl m-2 mt-8 ml-8">Char Hope Foundation</h3>
     <div className='sm:flex '>
       <div className= "flex m-4 sm:items-center">
         <Link href="https://web.facebook.com/flotroltransforminglib2018?_rdc=1&_rdr" target="_blank"><AiFillFacebook className='m-2 text-blue-700' size={40}/></Link>
         <Link href="https://www.instagram.com/clarhopefoundation/" target="_blank"><AiFillInstagram className='m-2 text-pink-500 ' size={33}/></Link>
         <Link href="https://twitter.com/LadyWeah" target="_blank"><AiOutlineTwitter className='m-2 text-blue-500' size={33}/></Link>
-        <Image className='rounded-2xl' src="/she's you.png" alt='shes you' width="100" height="100"/>
+        <Link href="/concept"><Image className='rounded-2xl' src="/she's you.png" alt='shes you' width="100" height="100"/></Link>
       </div>
      <div className ="sm:block">
       <Link href="/donate" className="mx-2 sm:mx-2">
