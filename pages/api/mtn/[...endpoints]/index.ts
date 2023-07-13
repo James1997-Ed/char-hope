@@ -37,4 +37,6 @@ class MTNAPI{
     }
 }
 
-export default (...args:[req: NextApiRequest, res: NextApiResponse]) => new MTNAPI().handler(...args)
+const momo = (...args:[req: NextApiRequest, res: NextApiResponse]) => new MTNAPI().handler(...args)
+
+export default momo
