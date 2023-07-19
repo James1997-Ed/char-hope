@@ -25,7 +25,7 @@ function Application() {
       }))
     }
 
-    const submission = collection (db,"applicationData");
+    const submission = collection (db,"ApplicationData");
   
 
     const handleSubmit = (e) => {
@@ -97,12 +97,12 @@ function Application() {
               </div>
             </div>
                <div className='bg-green-900 sm:p-8 p-2  sm:m-12 m-2 '>
-                  <form className='' onSubmit={handleSubmit} method=''>
+                  <form className='' onSubmit={handleSubmit} >
                     <div className='p-4'>
                     <h1  className='text-center text-white text-2xl font-bold'>Support Our course</h1>
                      <h1 className='text-center text-white text-xl font-bold '>Leave a one-time donation</h1>
                     </div>
-                     <tr className='block sm:flex'>
+                     <tr className='block sm:flex justify-between'>
                        <label htmlFor='firstName'>
                        <td className='text-white font-bold m-2'>First Name</td>
                        </label>
@@ -147,7 +147,7 @@ function Application() {
                      <label htmlFor="dataText" className="font-bold text-white p-2 mb-2"></label>
                      <select id="dataText" value={formState.dataText} name="dataText" onChange={handleInputChange} className="border rounded p-2">
                        <option id='opt1' className="py-2"></option>
-                       <option id='opt2' value="Myself" className="sm:py-2">FaceBook</option>
+                       <option id='opt2' name="dataText" value="Myself" className="sm:py-2">FaceBook</option>
                        <option id='opt3' value="An Organization" className="sm:py-2">twitter</option>
                        <option id='opt4' value="other" className="sm:py-2">instagram</option>
                      </select>

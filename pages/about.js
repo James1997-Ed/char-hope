@@ -6,12 +6,12 @@ function AboutUs() {
   return (
     <div>
       <div>
-        <div className='block sm:flex m-16 pt-12 '>
+        <div className='block sm:flex sm:m-16 pt-12 '>
           <div>
             <h1 className='sm:text-6xl text-4xl font-bold sm:m-16 px-8 sm:py-32 text-center '>About Us</h1>
           </div>
          <div>
-              <video autoPlay loop className="w-100  h-100 ">
+              <video autoPlay={true} loop className="w-100  h-100 ">
               <source src="/Char_hope.mp4" type="video/mp4" />
               Your browser does not support the video tag.
              </video>
@@ -36,7 +36,7 @@ function AboutUs() {
             <h1 className='sm:text-4xl text-2xl text-center font-bold'>About Our Founder</h1>
         </div>
         <div className='block sm:flex'>
-            <div className='items-center sm:text-xl m-2 text-2xl p-4'>
+            <div className='items-center sm:text-xl m-2 text-xl sm:p-4'>
                 <p className='p-2'>
                     A Nurse by profession, successful business women, and Humanitarian,
                     Mrs Clar M. Weah passion to help the underprivileged dates long before
@@ -60,14 +60,14 @@ function AboutUs() {
                     <Link href="/ourFounder" className="text-blue-800">Read More</Link>
                 </p> 
             </div>
-            <div className='items-center m-4 p-8' >
+            <div className='items-center sm:m-4 sm:p-8' >
               <Image src="/news12.png" width="1200" height="200" alt="char weah"/>
             </div>
         </div>
-        <div className='bg-blue-400 text-white m-2 sm:mb-4 p-8'>
-          <h1 className='sm:text-4xl text-2xl text-center font-bold'>Our Achievements</h1>
+        <div className='bg-blue-400 text-white mt-8 sm:m-2 sm:mb-4 p-8'>
+          <h1 className='sm:text-4xl text-4xl text-center font-bold'>Our Achievements</h1>
         </div>
-        <div className='items-center sm:text-xl text-2xl sm:m-4 m-2 sm:p-8 p-2'>
+        <div className='items-center sm:text-xl text-xl sm:m-4  sm:p-8 p-2'>
             <p className='p-2'>
             Clar Hope Foundation: Construction of Decontee Home for the Elderly,
              Constructed in Buchana, Grand Bassa County through Clar Hope Foundation,

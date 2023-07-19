@@ -32,27 +32,37 @@ function NavBar() {
             <div>
             <Link href="/"><Image src ="/logo.png" alt="react imag" width="400" height="100" className="w-48 md:w-auto h-auto"/></Link>
             </div>
-        <div className="flex items-center mt-4 md:mt-0">
-          <nav className="flex list-none">
-                <ul className="flex m-8">
-                    <li>
-                        <Link href="/" className="font-bold p-2 text-xl text-blue-700 hover:text-black border border-black mr-8 rounded">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/about" className="text-xl text-gray-700 hover:text-blue-700 mr-8">About Us</Link>
-                    </li>
-                    <li>
-                        <Link href="/services" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Service</Link>
-                    </li>
-                    <li>
-                        <Link href="/application" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Application</Link>
-                    </li>
-                    <li>
-                        <Link href="/donate" className="text-xl text-gray-700 hover:text-blue-700 mr-8">Donate Now</Link>
-                    </li>
-                </ul>
-          </nav>
-        </div>
+            <div>
+            <ul className="flex m-8">
+              <li>
+                <Link href="/" className="font-bold p-2 text-xl text-blue-700 hover:text-black border-b-2 border-transparent hover:border-blue-700 mr-8 active:text-blue-500 active:border-blue-500">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-xl text-gray-700 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-700 mr-8 active:text-blue-500 active:border-blue-500">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-xl text-gray-700 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-700 mr-8 active:text-blue-500 active:border-blue-500">
+                  Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/application" className="text-xl text-gray-700 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-700 mr-8 active:text-blue-500 active:border-blue-500">
+                  Application
+                </Link>
+              </li>
+              <li>
+                <Link href="/donate" className="text-xl text-gray-700 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-700 mr-8 active:text-blue-500 active:border-blue-500">
+                  Donate Now
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          
   </div>
   {/** */}
   {/** Mobile mode */}

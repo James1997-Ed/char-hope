@@ -42,7 +42,7 @@ export default function OurFounder(){
         <div>
           <div className="mt-32 sm:text-4xl text-2xl text-center font-bold">
             <h1>About Our Founder</h1>
-           <div> <Image className="m-auto p-4" src="/ClarWeah.png" width="230" height="200" alt="ClarWeah"/>
+           <div> <Image className="m-auto sm:p-4" src="/ClarWeah.png" width="400" height="200" alt="ClarWeah"/>
            </div>
            </div>
 

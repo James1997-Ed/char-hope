@@ -43,17 +43,17 @@ export default function ourAchievements(){
         <div>
           <div className=' text-xl sm:m-16 pt-12 '>
           <div>
-            <h1 className='sm:text-6xl text-2xl text-center font-bold sm:m-16 '>Our Achievements</h1>
-            <div className="m-16">
+            <h1 className='sm:text-6xl text-4xl text-center font-bold m-4 sm:m-16 '>Our Achievements</h1>
+            <div className="sm:m-16 m-8">
         <Slider {...settings}>
         <div>
-           <Image className="m-auto p-4" src="/founder1.jpg" alt="image" width="500" height="200"/>
+           <Image className="m-auto p-4" src="/founder1.jpg" alt="image" width="800" height="400"/>
         </div>
         <div>
-        <Image className="m-auto p-4" src="/ClarWeah.png" alt="image" width="500" height="200"/>
+        <Image className="m-auto p-4" src="/ClarWeah.png" alt="image" width="800" height="400"/>
      </div>
   <div>
-  <Image className="m-auto " src="/founder1.jpg" alt="image" width="500" height="200"/>
+  <Image className="m-auto " src="/founder1.jpg" alt="image" width="800" height="400"/>
 </div>
      </Slider>
         </div>
@@ -74,17 +74,17 @@ export default function ourAchievements(){
               restoring their hope for a brighter future.
               </p>
               <Slider {...settings}>
-              <div className="">
-                 <Image className="m-auto p-4" src="/city_of_hope4.jpg" alt="image" width="500" height="200"/>
+              <div className="w-full h-full">
+                 <Image className="m-auto sm:p-4" src="/city_of_hope4.jpg" alt="image" width="800" height="400"/>
               </div>
               <div className="w-full h-full m-2">
-              <Image className="m-auto p-4" src="/city_of_hope.jpeg" alt="image" width="500" height="200"/>
+              <Image className="m-auto p-4" src="/city_of_hope.jpeg" alt="image" width="800" height="400"/>
            </div>
         <div className="w-full h-full m-2">
-        <Image className="m-auto " src="/city_of_hope3.jpeg" alt="image" width="500" height="200"/>
+        <Image className="m-auto " src="/city_of_hope3.jpeg" alt="image" width="800" height="400"/>
       </div>
       <div className="w-full h-full m-2">
-        <Image className="m-auto " src="/city_of_hope2.png" alt="image" width="500" height="200"/>
+        <Image className="m-auto " src="/city_of_hope2.png" alt="image" width="800" height="400"/>
       </div>
            </Slider>
           </div>
@@ -95,13 +95,19 @@ export default function ourAchievements(){
               Your browser does not support the video tag.
              </video>
            </div>
+           <div className="smm:m-2 sm:mb-20">
+              <video autoPlay loop className="w-200   h-200 ">
+              <source src="/Char_hope.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+             </video>
+           </div>
           </div>
           <div className="block sm:flex">
           <p className="mt-16 sm:p-16 text-2xl m-2">Training of over 40 Medical practitioners: in partnership
              with Merck Foundation, at least 40 medical practitioners including 
              doctors have been trained in various specialties in oncology, gynecology,
               embryology among others</p>
-            <Image src="/china2.jpg" width="400" height="200" alt="image"/>
+            <Image src="/china2.jpg" width="400" height="200" alt="image" className="mb-8"/>
           </div>
         </div>
   
