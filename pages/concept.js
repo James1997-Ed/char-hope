@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function ConceptNote() {
   return (
-    <div className='sm:mt-32'>
+    <div className='sm:mt-32 mt-12'>
       <div>
         <div className='block sm:flex'>
           <Image className='sm:m-4 sm:mt-8' src='/sheyou.png' alt='concept' width='700' height='200'/>
