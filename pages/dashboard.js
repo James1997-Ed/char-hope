@@ -70,7 +70,7 @@ const DashBoard = () => {
   const renderApplicationData = () => {
     if (application) {
       return (
-        <div>
+        <div className='m-4'>
           {applicationData.map((documentf) => (
             <div key={documentf.id}>
             <h1 className='text-xl'>Name: {documentf.firstName} {documentf.lastName}</h1>
